@@ -1,0 +1,63 @@
+personal list of commands and curls commands for the database, also notes about the project.
+
+### create account from the master folder: ###
+EMAIL="leni@test.com" PASSWORD="1234" sh curl-scripts/auth/sign-up.sh
+
+{"user":{
+    "_id":"5f2a58b84052527f15e765c7",
+    "email":"leni@test.com",
+    "createdAt":"2020-08-05T06:59:04.497Z",
+    "updatedAt":"2020-08-05T06:59:04.497Z","__v":0
+    },
+    {"_id":"5f2a59604052527f15e765c8",
+    "email":"test1@gmail.com",
+    "createdAt":"2020-08-05T07:01:52.488Z",
+    "updatedAt":"2020-08-05T07:01:52.488Z","__v":0
+    },
+    {"_id":"5f2a59b74052527f15e765c9",
+    "email":"test2@gmail.com",
+    "createdAt":"2020-08-05T07:03:19.459Z",
+    "updatedAt":"2020-08-05T07:03:19.459Z","__v":0
+    }
+}
+
+### sign-in / login into the website to get the token ###
+Sign works and give me a token to be used it.
+EMAIL="leni@test.com" PASSWORD="1234" sh curl-scripts/auth/sign-in.sh
+
+{"user":{
+    "_id":"5f2a58b84052527f15e765c7",
+    "email":"leni@test.com",
+    "createdAt":"2020-08-05T06:59:04.497Z",
+    "updatedAt":"2020-08-05T07:06:29.460Z","__v":0,
+    "token":"a49ba603a48d0c45e1c5b967414c7495"
+    }
+}
+
+
+### sign-out / logout of the website deleting the token ###
+The user have to be log in, to be able to sign out.
+TOKEN="a49ba603a48d0c45e1c5b967414c7495" sh curl-scripts/auth/sign-out.sh
+
+I get a 204 response with nothing on the body because it has been 'deleted.'
+DELETE /sign-out/
+body {}
+
+
+### change password ###
+It works fine!
+TOKEN="d4570e638fd1de4b1b45bac5a63701a8" OLDPW="1234" NEWPW="5678" sh curl-scripts/auth/change-password.sh
+
+*************************************************************************************************************
+create an example is working... {the result comes back with an owner with the same id as the example}
+TOKEN="c5d1f3bf3afb0b6bee8be5768437ba95" TEXT="some text goes here" TITLE="The title goes here" sh curl-scripts/examples/create.sh
+
+{"example":{
+    "_id":"5f2ab0e40fa7073865952f12",
+    "text":"some text goes here","title":
+    "The title goes here",
+    "owner":"5f2a58b84052527f15e765c7",
+    "createdAt":"2020-08-05T13:15:16.077Z",
+    "updatedAt":"2020-08-05T13:15:16.077Z","__v":0
+    }
+}
