@@ -1,53 +1,44 @@
-# Snippets-api
+# Snippets API
 
-# Application Title: A Description
-
-This application allows the user to do x, y, and z. Maybe here's a reason why I
-wanted to do this project, or came up with this idea.
+This application allows the users to create, edit, delete and view snippets of code. 
 
 ## Important Links
 
-- [Other Repo](www.link.com)
-- [Deployed API](www.link.com)
-- [Deployed Client](www.link.com)
+- [Deployed API](https://github.com/lenilunderman/snippets-api)
+- [Deployed Client](https://lenilunderman.github.io/snippets-client/)
 
-## Planning Story
+## API End Points
 
-Lorem ipsum dolor amet cloud bread letterpress squid actually, single-origin
-coffee williamsburg af poutine fingerstache austin semiotics paleo man braid
-vexillologist. Tumeric literally banjo pickled disrupt cold-pressed thundercats
-shoreditch try-hard health goth intelligentsia pop-up small batch skateboard
-farm-to-table. Meh tofu fam, direct trade tattooed stumptown etsy everyday
-carry activated charcoal. Neutra cornhole polaroid literally salvia, listicle
-tofu.
+| Verb   | URI Pattern            | Controller#Action |
+|--------|------------------------|-------------------|
+| POST   | `/sign-up`             | `users#signup`    |
+| POST   | `/sign-in`             | `users#signin`    |
+| DELETE | `/sign-out`            | `users#signout`   |
+| PATCH  | `/change-password`     | `users#changepw`  |
+| GET    | `/snippets`            | `snippets#index`  |
+| POST   | `/snippets`            | `snippets#create` |
+| GET    | `/snippets/:id`        | `snippets#show`   |
+| DELETE | `/snippets/:id`        | `snippets#delete` |
+| PATCH  | `/snippets/:id`        | `snippets#update` |
 
-### User Stories
+All data returned from API actions is formatted as JSON.
+
+## User Stories
 
 - As a user I want to sign in/up
 - As a user I want to Create a new < resource >
 - As a user I want to Read multiple < resources >
-- As a user I want to Read a single < resource >
 - As a user I want to Update a < resource > I own
 - As a user I want to Delete a < resource > I own
 
-### Technologies Used
+## Disclaimer
 
-- jQuery
-- HTML/CSS
-- Bootstrap
-- Javascript
+This API may be reset or altered at anytime. The future of this API may not align with the current state and therefore the state your client application expects. If you would like to maintain a version of this API in its current state for your future use, please fork and clone the repository and launch it on heroku.
 
-### Unsolved Problems
+## ORM Database
+![Image of ORM](https://i.imgur.com/pUCgiKe.png)
 
-- Still need to ....
-- Would like to eventually ....
 
-## Images
+## [License](LICENSE)
 
-#### Wireframe:
-![wireframe](https://lucidchart.zendesk.com/hc/article_attachments/360001080866/Facebook_Wireframe_-_New_Page.png)
-
----
-
-#### ERD:
-![ERD](https://www.smartdraw.com/entity-relationship-diagram/img/cardinality.jpg?bn=1510011144)
+1. All content is licensed under a CC­BY­NC­SA 4.0 license.
