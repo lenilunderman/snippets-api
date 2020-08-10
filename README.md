@@ -23,6 +23,12 @@ This application allows the users to create, edit, delete and view snippets of c
 
 All data returned from API actions is formatted as JSON.
 
+## Technologies
+- Node JS
+- Mongoose
+- MongoDB 
+- Heroku
+
 ## User Stories
 
 - As a user I want to sign in/up
