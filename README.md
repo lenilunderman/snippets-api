@@ -24,10 +24,14 @@ This application allows the users to create, edit, delete and view snippets of c
 All data returned from API actions is formatted as JSON.
 
 ## Technologies
-- Node JS
+
+- Mongo DB
 - Mongoose
-- MongoDB 
-- Heroku
+- Ajax
+- JSON
+- Node.JS
+- Express
+- Passport
 
 ## User Stories
 
