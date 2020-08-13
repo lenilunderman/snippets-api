@@ -5,6 +5,7 @@ This API stores the information about an user and its respective resoures. It al
 
 ## Important Links
 - [Snippets Client Repo](https://github.com/lenilunderman/snippets-client)
+- [Snippets API Repo](https://github.com/lenilunderman/snippets-api)
 - [Deployed Snippets API](https://aqueous-brushlands-45402.herokuapp.com/)
 - [Deployed Client Application](https://lenilunderman.github.io/snippets-client/)
 
